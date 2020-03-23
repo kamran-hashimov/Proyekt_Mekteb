@@ -56,7 +56,7 @@ SELECT Fennid, FennAd FROM Tbl_Fennler WHERE (Fennid = @Fennid)</CommandText>
               <Mapping SourceColumn="FennAd" DataSetColumn="FennAd" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennDeyisdir" Modifier="Public" Name="FennDeyisdir" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FennDeyisdir">
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennDeyisdir" Modifier="Public" Name="FennDeyisdir" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FennDeyisdir">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [Tbl_Fennler] SET [FennAd] = @FennAd WHERE ([Fennid] = @Original_Fennid)</CommandText>
@@ -67,7 +67,7 @@ SELECT Fennid, FennAd FROM Tbl_Fennler WHERE (Fennid = @Fennid)</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennElaveEt" Modifier="Public" Name="FennElaveEt" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FennElaveEt">
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennElaveEt" Modifier="Public" Name="FennElaveEt" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FennElaveEt">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [Tbl_Fennler] ([FennAd]) VALUES (@FennAd);
@@ -78,7 +78,7 @@ SELECT Fennid, FennAd FROM Tbl_Fennler WHERE (Fennid = @Fennid)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennSil" Modifier="Public" Name="FennSil" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FennSil">
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FennSil" Modifier="Public" Name="FennSil" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FennSil">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [Tbl_Fennler] WHERE ([Fennid] = @Original_Fennid) </CommandText>
@@ -87,6 +87,128 @@ SELECT Fennid, FennAd FROM Tbl_Fennler WHERE (Fennid = @Fennid)</CommandText>
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="SagirdData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="SagirdData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="SagirdData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Sagirdler.Sagirdid, Tbl_Sagirdler.Sagirdad, Tbl_Sagirdler.SagirdSoyad, Tbl_Sagirdler.SagirdCinsi, Tbl_Kulublar.KulubAd
+FROM            Tbl_Sagirdler INNER JOIN
+                         Tbl_Kulublar ON Tbl_Sagirdler.SagirdKulub = Tbl_Kulublar.Kulubid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Sagirdid" DataSetColumn="Sagirdid" />
+              <Mapping SourceColumn="Sagirdad" DataSetColumn="Sagirdad" />
+              <Mapping SourceColumn="SagirdSoyad" DataSetColumn="SagirdSoyad" />
+              <Mapping SourceColumn="SagirdCinsi" DataSetColumn="SagirdCinsi" />
+              <Mapping SourceColumn="KulubAd" DataSetColumn="KulubAd" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="SagirdGetir" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="SagirdGetir" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="SagirdGetir" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Sagirdler.Sagirdid, Tbl_Sagirdler.Sagirdad, Tbl_Sagirdler.SagirdSoyad, Tbl_Sagirdler.SagirdCinsi, Tbl_Kulublar.KulubAd
+FROM            Tbl_Sagirdler INNER JOIN
+                         Tbl_Kulublar ON Tbl_Sagirdler.SagirdKulub = Tbl_Kulublar.Kulubid
+where Sagirdad = @sgad</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgad" ColumnName="Sagirdad" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sgad" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Sagirdad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SagirdDeyisdir" Modifier="Public" Name="SagirdDeyisdir" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="SagirdDeyisdir">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       Tbl_Sagirdler
+SET                Sagirdad = @sgad, SagirdSoyad = @sgsoyad, SagirdKulub = @sgkulub, SagirdCinsi = @sgcins where Sagirdid = @sgid</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgad" ColumnName="Sagirdad" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sgad" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Sagirdad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgsoyad" ColumnName="SagirdSoyad" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sgsoyad" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="SagirdSoyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgkulub" ColumnName="SagirdKulub" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@sgkulub" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="SagirdKulub" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgcins" ColumnName="SagirdCinsi" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(5)" DbType="AnsiString" Direction="Input" ParameterName="@sgcins" Precision="0" ProviderType="VarChar" Scale="0" Size="5" SourceColumn="SagirdCinsi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="sgid" ColumnName="Sagirdid" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@sgid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Sagirdid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SagirdElaveEt" Modifier="Public" Name="SagirdElaveEt" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SagirdElaveEt">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Tbl_Sagirdler
+                         (Sagirdad, SagirdSoyad, SagirdKulub, SagirdCinsi)
+VALUES        (@sgad,@sgsoyad,@sgkulub,@sgcins)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgad" ColumnName="Sagirdad" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sgad" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="Sagirdad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgsoyad" ColumnName="SagirdSoyad" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@sgsoyad" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="SagirdSoyad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgkulub" ColumnName="SagirdKulub" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@sgkulub" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="SagirdKulub" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgcins" ColumnName="SagirdCinsi" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="varchar(5)" DbType="AnsiString" Direction="Input" ParameterName="@sgcins" Precision="0" ProviderType="VarChar" Scale="0" Size="5" SourceColumn="SagirdCinsi" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SagirdSil" Modifier="Public" Name="SagirdSil" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SagirdSil">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM Tbl_Sagirdler
+WHERE        (Sagirdid = @sgid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="sgid" ColumnName="Sagirdid" DataSourceName="Mekteb.dbo.Tbl_Sagirdler" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@sgid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Sagirdid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tbl_NeticelerTableAdapter" GeneratorDataComponentClassName="Tbl_NeticelerTableAdapter" Name="Tbl_Neticeler" UserDataComponentName="Tbl_NeticelerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="NeticeSiyahisi" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="NeticeSiyahisi" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="NeticeSiyahisi" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT       Neticeid , FennAd,Sagirdid,Imtahan1,Imtahan2,Imtahan3,Proyekt
+FROM            Tbl_Neticeler inner join Tbl_Fennler on Tbl_Neticeler.Fennid = Tbl_Fennler.Fennid
+WHERE        (Sagirdid = @sgid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sgid" ColumnName="Sagirdid" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@sgid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Sagirdid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Neticeid" DataSetColumn="Neticeid" />
+              <Mapping SourceColumn="Sagirdid" DataSetColumn="Sagirdid" />
+              <Mapping SourceColumn="Imtahan1" DataSetColumn="Imtahan1" />
+              <Mapping SourceColumn="Imtahan2" DataSetColumn="Imtahan2" />
+              <Mapping SourceColumn="Imtahan3" DataSetColumn="Imtahan3" />
+              <Mapping SourceColumn="Proyekt" DataSetColumn="Proyekt" />
+              <Mapping SourceColumn="FennAd" DataSetColumn="FennAd" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="MektebConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NeticeYenile" Modifier="Public" Name="NeticeYenile" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="NeticeYenile">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [Tbl_Neticeler] SET [Fennid] = @Fennid, [Sagirdid] = @Sagirdid, [Imtahan1] = @Imtahan1, [Imtahan2] = @Imtahan2, [Imtahan3] = @Imtahan3, [Proyekt] = @Proyekt, [Ortalama] = @Ortalama, [Veziyyet] = @Veziyyet WHERE ([Neticeid] = @Original_Neticeid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fennid" ColumnName="Fennid" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@Fennid" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="Fennid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Sagirdid" ColumnName="Sagirdid" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Sagirdid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Sagirdid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Imtahan1" ColumnName="Imtahan1" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@Imtahan1" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="Imtahan1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Imtahan2" ColumnName="Imtahan2" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@Imtahan2" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="Imtahan2" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Imtahan3" ColumnName="Imtahan3" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@Imtahan3" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="Imtahan3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Proyekt" ColumnName="Proyekt" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="tinyint" DbType="Byte" Direction="Input" ParameterName="@Proyekt" Precision="0" ProviderType="TinyInt" Scale="0" Size="1" SourceColumn="Proyekt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Ortalama" ColumnName="Ortalama" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="decimal(5, 2)" DbType="Decimal" Direction="Input" ParameterName="@Ortalama" Precision="5" ProviderType="Decimal" Scale="2" Size="5" SourceColumn="Ortalama" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Veziyyet" ColumnName="Veziyyet" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Veziyyet" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Veziyyet" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Neticeid" ColumnName="Neticeid" DataSourceName="Mekteb.dbo.Tbl_Neticeler" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_Neticeid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Neticeid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
               </DbSource>
             </Sources>
           </TableAdapter>
@@ -112,11 +234,73 @@ SELECT Fennid, FennAd FROM Tbl_Fennler WHERE (Fennid = @Fennid)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sagirdid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSagirdid" msprop:Generator_ColumnPropNameInRow="Sagirdid" msprop:Generator_ColumnPropNameInTable="SagirdidColumn" msprop:Generator_UserColumnName="Sagirdid" type="xs:int" />
+              <xs:element name="Sagirdad" msprop:Generator_ColumnVarNameInTable="columnSagirdad" msprop:Generator_ColumnPropNameInRow="Sagirdad" msprop:Generator_ColumnPropNameInTable="SagirdadColumn" msprop:Generator_UserColumnName="Sagirdad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SagirdSoyad" msprop:Generator_ColumnVarNameInTable="columnSagirdSoyad" msprop:Generator_ColumnPropNameInRow="SagirdSoyad" msprop:Generator_ColumnPropNameInTable="SagirdSoyadColumn" msprop:Generator_UserColumnName="SagirdSoyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SagirdCinsi" msprop:Generator_ColumnVarNameInTable="columnSagirdCinsi" msprop:Generator_ColumnPropNameInRow="SagirdCinsi" msprop:Generator_ColumnPropNameInTable="SagirdCinsiColumn" msprop:Generator_UserColumnName="SagirdCinsi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KulubAd" msprop:Generator_ColumnVarNameInTable="columnKulubAd" msprop:Generator_ColumnPropNameInRow="KulubAd" msprop:Generator_ColumnPropNameInTable="KulubAdColumn" msprop:Generator_UserColumnName="KulubAd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_Neticeler" msprop:Generator_TableClassName="Tbl_NeticelerDataTable" msprop:Generator_TableVarName="tableTbl_Neticeler" msprop:Generator_TablePropName="Tbl_Neticeler" msprop:Generator_RowDeletingName="Tbl_NeticelerRowDeleting" msprop:Generator_RowChangingName="Tbl_NeticelerRowChanging" msprop:Generator_RowEvHandlerName="Tbl_NeticelerRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_NeticelerRowDeleted" msprop:Generator_UserTableName="Tbl_Neticeler" msprop:Generator_RowChangedName="Tbl_NeticelerRowChanged" msprop:Generator_RowEvArgName="Tbl_NeticelerRowChangeEvent" msprop:Generator_RowClassName="Tbl_NeticelerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Neticeid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnNeticeid" msprop:Generator_ColumnPropNameInRow="Neticeid" msprop:Generator_ColumnPropNameInTable="NeticeidColumn" msprop:Generator_UserColumnName="Neticeid" type="xs:int" />
+              <xs:element name="Sagirdid" msprop:Generator_ColumnVarNameInTable="columnSagirdid" msprop:Generator_ColumnPropNameInRow="Sagirdid" msprop:Generator_ColumnPropNameInTable="SagirdidColumn" msprop:Generator_UserColumnName="Sagirdid" type="xs:int" minOccurs="0" />
+              <xs:element name="Imtahan1" msprop:Generator_ColumnVarNameInTable="columnImtahan1" msprop:Generator_ColumnPropNameInRow="Imtahan1" msprop:Generator_ColumnPropNameInTable="Imtahan1Column" msprop:Generator_UserColumnName="Imtahan1" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Imtahan2" msprop:Generator_ColumnVarNameInTable="columnImtahan2" msprop:Generator_ColumnPropNameInRow="Imtahan2" msprop:Generator_ColumnPropNameInTable="Imtahan2Column" msprop:Generator_UserColumnName="Imtahan2" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Imtahan3" msprop:Generator_ColumnVarNameInTable="columnImtahan3" msprop:Generator_ColumnPropNameInRow="Imtahan3" msprop:Generator_ColumnPropNameInTable="Imtahan3Column" msprop:Generator_UserColumnName="Imtahan3" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Proyekt" msprop:Generator_ColumnVarNameInTable="columnProyekt" msprop:Generator_ColumnPropNameInRow="Proyekt" msprop:Generator_ColumnPropNameInTable="ProyektColumn" msprop:Generator_UserColumnName="Proyekt" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="FennAd" msprop:Generator_ColumnVarNameInTable="columnFennAd" msprop:Generator_ColumnPropNameInRow="FennAd" msprop:Generator_ColumnPropNameInTable="FennAdColumn" msprop:Generator_UserColumnName="FennAd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Tbl_Fennler" />
       <xs:field xpath="mstns:Fennid" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:Sagirdid" />
+    </xs:unique>
+    <xs:unique name="Tbl_Neticeler_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tbl_Neticeler" />
+      <xs:field xpath="mstns:Neticeid" />
     </xs:unique>
   </xs:element>
 </xs:schema>

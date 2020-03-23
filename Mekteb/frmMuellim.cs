@@ -28,5 +28,17 @@ namespace Mekteb
             frmFennler frm = new frmFennler();
             frm.Show();
         }
+
+        private void btnSagirdEmeliyyatlari_Click(object sender, EventArgs e)
+        {
+            frmSagird frm = new frmSagird();
+            frm.Show();
+        }
+
+        private void btnImtahanNeticeleri_Click(object sender, EventArgs e)
+        {
+            frmImtahanNeticeleri frm = new frmImtahanNeticeleri();
+            frm.Show();
+        }
     }
 }

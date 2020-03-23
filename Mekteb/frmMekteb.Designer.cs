@@ -43,7 +43,7 @@
             // 
             this.pcbSagird.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbSagird.Image = ((System.Drawing.Image)(resources.GetObject("pcbSagird.Image")));
-            this.pcbSagird.Location = new System.Drawing.Point(59, 32);
+            this.pcbSagird.Location = new System.Drawing.Point(33, 31);
             this.pcbSagird.Name = "pcbSagird";
             this.pcbSagird.Size = new System.Drawing.Size(78, 76);
             this.pcbSagird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 118);
+            this.label1.Location = new System.Drawing.Point(54, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(250, 118);
+            this.label2.Location = new System.Drawing.Point(224, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.pcbMuellim.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcbMuellim.Image = ((System.Drawing.Image)(resources.GetObject("pcbMuellim.Image")));
-            this.pcbMuellim.Location = new System.Drawing.Point(232, 32);
+            this.pcbMuellim.Location = new System.Drawing.Point(206, 31);
             this.pcbMuellim.Name = "pcbMuellim";
             this.pcbMuellim.Size = new System.Drawing.Size(78, 76);
             this.pcbMuellim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,7 +83,7 @@
             // 
             // txtNomre
             // 
-            this.txtNomre.Location = new System.Drawing.Point(59, 167);
+            this.txtNomre.Location = new System.Drawing.Point(33, 166);
             this.txtNomre.Name = "txtNomre";
             this.txtNomre.Size = new System.Drawing.Size(251, 20);
             this.txtNomre.TabIndex = 5;
@@ -91,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 170);
+            this.label3.Location = new System.Drawing.Point(138, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 9;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(370, 217);
+            this.ClientSize = new System.Drawing.Size(318, 217);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNomre);
             this.Controls.Add(this.pcbMuellim);
