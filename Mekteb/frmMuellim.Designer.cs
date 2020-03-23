@@ -125,7 +125,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(78, 165);
+            this.button4.Location = new System.Drawing.Point(72, 165);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 45);
             this.button4.TabIndex = 6;
