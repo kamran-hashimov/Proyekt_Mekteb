@@ -11,7 +11,7 @@ namespace Mekteb
     {
         public SqlConnection Connect()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FKU6315\\SQL;Initial Catalog=Mekteb;Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-FKU6315\\SQL;Initial Catalog=Mekteb;Integrated Security=True");
             connection.Open();
             return connection;
         }

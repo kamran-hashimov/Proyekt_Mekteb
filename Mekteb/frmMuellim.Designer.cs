@@ -34,11 +34,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnImtahanNeticeleri = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSagirdEmeliyyatlari = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -99,16 +99,17 @@
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // button3
+            // btnImtahanNeticeleri
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(78, 114);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 45);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "İmtahan nəticələri";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnImtahanNeticeleri.BackColor = System.Drawing.Color.Transparent;
+            this.btnImtahanNeticeleri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImtahanNeticeleri.Location = new System.Drawing.Point(78, 114);
+            this.btnImtahanNeticeleri.Name = "btnImtahanNeticeleri";
+            this.btnImtahanNeticeleri.Size = new System.Drawing.Size(127, 45);
+            this.btnImtahanNeticeleri.TabIndex = 4;
+            this.btnImtahanNeticeleri.Text = "İmtahan nəticələri";
+            this.btnImtahanNeticeleri.UseVisualStyleBackColor = false;
+            this.btnImtahanNeticeleri.Click += new System.EventHandler(this.btnImtahanNeticeleri_Click);
             // 
             // pictureBox4
             // 
@@ -141,16 +142,17 @@
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             // 
-            // button5
+            // btnSagirdEmeliyyatlari
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(78, 216);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 45);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Şagird əməliyyatları";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSagirdEmeliyyatlari.BackColor = System.Drawing.Color.Transparent;
+            this.btnSagirdEmeliyyatlari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSagirdEmeliyyatlari.Location = new System.Drawing.Point(78, 216);
+            this.btnSagirdEmeliyyatlari.Name = "btnSagirdEmeliyyatlari";
+            this.btnSagirdEmeliyyatlari.Size = new System.Drawing.Size(127, 45);
+            this.btnSagirdEmeliyyatlari.TabIndex = 8;
+            this.btnSagirdEmeliyyatlari.Text = "Şagird əməliyyatları";
+            this.btnSagirdEmeliyyatlari.UseVisualStyleBackColor = false;
+            this.btnSagirdEmeliyyatlari.Click += new System.EventHandler(this.btnSagirdEmeliyyatlari_Click);
             // 
             // frmMuellim
             // 
@@ -159,11 +161,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(219, 264);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSagirdEmeliyyatlari);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnImtahanNeticeleri);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
@@ -187,10 +189,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnImtahanNeticeleri;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSagirdEmeliyyatlari;
     }
 }

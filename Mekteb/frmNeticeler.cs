@@ -23,7 +23,7 @@ namespace Mekteb
         
         private void Neticeler_Load(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("Select FennAd,imtahan1,imtahan2,imtahan3,Proyekt,Ortalama,Veziyyet from Tbl_Neticeler inner join Tbl_Fennler on Tbl_Neticeler.Fennid = Tbl_Fennler.Fennid where Sagirdid = @p1", connection.Connect());
+            SqlCommand command = new SqlCommand("Select FennAd,Imtahan1,Imtahan2,Imtahan3,Proyekt,Ortalama,Veziyyet from Tbl_Neticeler inner join Tbl_Fennler on Tbl_Neticeler.Fennid = Tbl_Fennler.Fennid where Sagirdid =  @p1", connection.Connect());
             command.Parameters.AddWithValue("@p1", nomre);
             SqlDataAdapter da = new SqlDataAdapter(command);
             DataTable dt = new DataTable();
